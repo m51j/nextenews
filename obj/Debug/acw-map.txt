@@ -1,0 +1,12 @@
+NexteNews.AddActivity, NexteNews;md5afb0f58fe27f4d224ee4f852bfdb37b2.AddActivity
+NexteNews.AddActivity, NexteNews, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5afb0f58fe27f4d224ee4f852bfdb37b2.AddActivity
+NexteNews.AddActivity;md5afb0f58fe27f4d224ee4f852bfdb37b2.AddActivity
+nextenews.AddActivity;md5afb0f58fe27f4d224ee4f852bfdb37b2.AddActivity
+NexteNews.HomeScreenAdapter, NexteNews;md5afb0f58fe27f4d224ee4f852bfdb37b2.HomeScreenAdapter
+NexteNews.HomeScreenAdapter, NexteNews, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5afb0f58fe27f4d224ee4f852bfdb37b2.HomeScreenAdapter
+NexteNews.HomeScreenAdapter;md5afb0f58fe27f4d224ee4f852bfdb37b2.HomeScreenAdapter
+nextenews.HomeScreenAdapter;md5afb0f58fe27f4d224ee4f852bfdb37b2.HomeScreenAdapter
+NexteNews.MainActivity, NexteNews;md5afb0f58fe27f4d224ee4f852bfdb37b2.MainActivity
+NexteNews.MainActivity, NexteNews, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5afb0f58fe27f4d224ee4f852bfdb37b2.MainActivity
+NexteNews.MainActivity;md5afb0f58fe27f4d224ee4f852bfdb37b2.MainActivity
+nextenews.MainActivity;md5afb0f58fe27f4d224ee4f852bfdb37b2.MainActivity
