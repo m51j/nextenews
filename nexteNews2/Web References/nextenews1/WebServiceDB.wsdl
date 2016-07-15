@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Addpost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Author" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="img" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddpostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddpostResult" type="tns:ReturnData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PostID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllData">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllDataResult" type="tns:ArrayOfReturnData2" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfReturnData2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ReturnData2" nillable="true" type="tns:ReturnData2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReturnData2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Author" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="img" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoginNotify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginNotifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginNotifyResult" type="tns:ReturnData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReturnData" nillable="true" type="tns:ReturnData" />
+      <s:element name="ArrayOfReturnData2" nillable="true" type="tns:ArrayOfReturnData2" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddpostSoapIn">
+    <wsdl:part name="parameters" element="tns:Addpost" />
+  </wsdl:message>
+  <wsdl:message name="AddpostSoapOut">
+    <wsdl:part name="parameters" element="tns:AddpostResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllData" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginNotifySoapIn">
+    <wsdl:part name="parameters" element="tns:LoginNotify" />
+  </wsdl:message>
+  <wsdl:message name="LoginNotifySoapOut">
+    <wsdl:part name="parameters" element="tns:LoginNotifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddpostHttpGetIn">
+    <wsdl:part name="Title" type="s:string" />
+    <wsdl:part name="Author" type="s:string" />
+    <wsdl:part name="URL" type="s:string" />
+    <wsdl:part name="Content" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="img" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddpostHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnData" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDataHttpGetIn" />
+  <wsdl:message name="GetAllDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnData2" />
+  </wsdl:message>
+  <wsdl:message name="LoginNotifyHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginNotifyHttpGetOut">
+    <wsdl:part name="Body" element="tns:ReturnData" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceDBSoap">
+    <wsdl:operation name="Addpost">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">add new post</wsdl:documentation>
+      <wsdl:input message="tns:AddpostSoapIn" />
+      <wsdl:output message="tns:AddpostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">get all post</wsdl:documentation>
+      <wsdl:input message="tns:GetAllDataSoapIn" />
+      <wsdl:output message="tns:GetAllDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginNotify">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Login Notify new user</wsdl:documentation>
+      <wsdl:input message="tns:LoginNotifySoapIn" />
+      <wsdl:output message="tns:LoginNotifySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebServiceDBHttpGet">
+    <wsdl:operation name="Addpost">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">add new post</wsdl:documentation>
+      <wsdl:input message="tns:AddpostHttpGetIn" />
+      <wsdl:output message="tns:AddpostHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">get all post</wsdl:documentation>
+      <wsdl:input message="tns:GetAllDataHttpGetIn" />
+      <wsdl:output message="tns:GetAllDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginNotify">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Login Notify new user</wsdl:documentation>
+      <wsdl:input message="tns:LoginNotifyHttpGetIn" />
+      <wsdl:output message="tns:LoginNotifyHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceDBSoap" type="tns:WebServiceDBSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Addpost">
+      <soap:operation soapAction="http://tempuri.org/Addpost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllData">
+      <soap:operation soapAction="http://tempuri.org/GetAllData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginNotify">
+      <soap:operation soapAction="http://tempuri.org/LoginNotify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceDBSoap12" type="tns:WebServiceDBSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Addpost">
+      <soap12:operation soapAction="http://tempuri.org/Addpost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllData">
+      <soap12:operation soapAction="http://tempuri.org/GetAllData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginNotify">
+      <soap12:operation soapAction="http://tempuri.org/LoginNotify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceDBHttpGet" type="tns:WebServiceDBHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Addpost">
+      <http:operation location="/Addpost" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllData">
+      <http:operation location="/GetAllData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginNotify">
+      <http:operation location="/LoginNotify" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceDB">
+    <wsdl:port name="WebServiceDBSoap" binding="tns:WebServiceDBSoap">
+      <soap:address location="http://testnexte-001-site1.gtempurl.com/android/WebServiceDB.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceDBSoap12" binding="tns:WebServiceDBSoap12">
+      <soap12:address location="http://testnexte-001-site1.gtempurl.com/android/WebServiceDB.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceDBHttpGet" binding="tns:WebServiceDBHttpGet">
+      <http:address location="http://testnexte-001-site1.gtempurl.com/android/WebServiceDB.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
