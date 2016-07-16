@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace nexteNews2.nexteNews21 {
+namespace nexteNews2.nextenews1 {
     using System;
     using System.Web.Services;
     using System.Diagnostics;

@@ -11,8 +11,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayoutmain"
         android:background="@drawable/whilebackground"
-        android:layout_marginEnd="1dp"
-        android:layout_marginStart="1dp"
         android:layout_marginBottom="5dp">
         <LinearLayout
             android:orientation="vertical"
@@ -26,15 +24,22 @@
                 android:gravity="left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout1">
             <TextView
                 android:textColor="@color/customeblue"
                 android:text="author name"
                 android:id="@+id/textAuthor"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:gravity="right" />
-        </LinearLayout>
+                android:layout_centerInParent="false"
+                android:layout_alignParentRight="false" />
+        </RelativeLayout>
         <TextView
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge"

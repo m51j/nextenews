@@ -12,6 +12,7 @@ using Android.Widget;
 using Android.Media;
 using Android.Graphics;
 using System.Net;
+using Square.Picasso;
 
 namespace nexteNews2
 {
@@ -53,10 +54,22 @@ namespace nexteNews2
             //var im1 = view.FindViewById<ImageView>(Resource.Id.Image);
             ImageView imgv = view.FindViewById<ImageView>(Resource.Id.imageURL);
 
-      var imageBitmap = GetImageBitmapFromUrl(item .imagetext );
-            imgv.SetImageBitmap(imageBitmap);
+            try
+            {
+                Picasso.With(context)
+      .Load(item.imagetext)
+      .Resize(1000, 700)
+      .CenterCrop()
+      .Into(imgv);
+            }
+            catch (Exception)
+            {
 
-                Button Readmoreb = view.FindViewById<Button>(Resource.Id.buttonRadMore);
+              
+            }
+           
+
+            Button Readmoreb = view.FindViewById<Button>(Resource.Id.buttonRadMore);
             Readmoreb.Click += delegate {
                   Android.Net.Uri uriphone = Android.Net.Uri.Parse(item.Urltext);
                    Intent calln = new Intent(Intent.ActionView, uriphone);

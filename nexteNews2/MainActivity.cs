@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android;
+using nexteNews2.nextenews1;
 
 namespace nexteNews2
 {
@@ -35,14 +36,14 @@ namespace nexteNews2
         protected override void OnResume()
         {
             base.OnResume();
-            nexteNews21.WebServiceDB ws = new nexteNews21.WebServiceDB();
+            WebServiceDB ws = new WebServiceDB();
             ws.GetAllDataCompleted += Ws_GetAllDataCompleted;
             ws.GetAllDataAsync();
         }
-        private void Ws_GetAllDataCompleted(object sender, nexteNews21.GetAllDataCompletedEventArgs e)
+        private void Ws_GetAllDataCompleted(object sender, GetAllDataCompletedEventArgs e)
         {
             tableItems.Clear();
-            foreach (nexteNews21.ReturnData2 item in e.Result)
+            foreach (ReturnData2 item in e.Result)
             {
                 tableItems.Add(new TableItem(item.Title , item.Author , item.URL , item.Content , item.img , item.date.ToShortDateString() + "  " + item.date.ToShortTimeString()));
 

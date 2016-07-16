@@ -161,17 +161,17 @@ namespace nexteNews2
 			// aapt resource value: 0x7f090004
 			public const int Urltext = 2131296260;
 			
-			// aapt resource value: 0x7f090010
-			public const int addnews = 2131296272;
+			// aapt resource value: 0x7f090011
+			public const int addnews = 2131296273;
 			
-			// aapt resource value: 0x7f09000e
-			public const int buttonRadMore = 2131296270;
+			// aapt resource value: 0x7f09000f
+			public const int buttonRadMore = 2131296271;
 			
 			// aapt resource value: 0x7f090006
 			public const int contentText = 2131296262;
 			
-			// aapt resource value: 0x7f09000c
-			public const int imageURL = 2131296268;
+			// aapt resource value: 0x7f09000d
+			public const int imageURL = 2131296269;
 			
 			// aapt resource value: 0x7f090000
 			public const int linearLayout1 = 2131296256;
@@ -179,20 +179,23 @@ namespace nexteNews2
 			// aapt resource value: 0x7f090008
 			public const int linearLayoutmain = 2131296264;
 			
-			// aapt resource value: 0x7f09000f
-			public const int listView1 = 2131296271;
+			// aapt resource value: 0x7f090010
+			public const int listView1 = 2131296272;
 			
 			// aapt resource value: 0x7f09000a
-			public const int textAuthor = 2131296266;
+			public const int relativeLayout1 = 2131296266;
 			
-			// aapt resource value: 0x7f09000d
-			public const int textContanit = 2131296269;
+			// aapt resource value: 0x7f09000b
+			public const int textAuthor = 2131296267;
+			
+			// aapt resource value: 0x7f09000e
+			public const int textContanit = 2131296270;
 			
 			// aapt resource value: 0x7f090009
 			public const int textDate = 2131296265;
 			
-			// aapt resource value: 0x7f09000b
-			public const int textTitle = 2131296267;
+			// aapt resource value: 0x7f09000c
+			public const int textTitle = 2131296268;
 			
 			// aapt resource value: 0x7f090001
 			public const int textView1 = 2131296257;

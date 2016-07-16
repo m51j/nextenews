@@ -5,7 +5,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using nexteNews2.nexteNews21;
+
+using nexteNews2.nextenews1;
 
 namespace nexteNews2
 {

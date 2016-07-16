@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using System.Threading.Tasks;
 using System.Threading;
+using nexteNews2.nextenews1;
 
 namespace nexteNews2
 {
@@ -23,7 +24,7 @@ namespace nexteNews2
         }
         public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int startId)
         {
-            nexteNews21.WebServiceDB ws = new nexteNews21.WebServiceDB();
+            WebServiceDB ws = new WebServiceDB();
             ws.LoginNotifyCompleted += Ws_LoginNotifyCompleted;
        
 
@@ -47,7 +48,7 @@ namespace nexteNews2
             return StartCommandResult.Sticky;
         }
 
-        private void Ws_LoginNotifyCompleted(object sender, nexteNews21.LoginNotifyCompletedEventArgs e)
+        private void Ws_LoginNotifyCompleted(object sender, LoginNotifyCompletedEventArgs e)
         {
             int lasuser = e.Result.PostID;
             if (lasuser > 0)

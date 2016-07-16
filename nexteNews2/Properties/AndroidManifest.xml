@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="nexteNews2.nexteNews2" android:versionCode="1" android:versionName="1.0">
-  <uses-sdk android:minSdkVersion="16" />
-  <application android:label="nexteNews2"
-                android:theme="@style/MyCustomTheme"
-               ></application>
-  
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.nextees.nextenews" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="16" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application android:label="nexteNews2" android:theme="@style/MyCustomTheme" android:icon="@drawable/addico"></application>
 </manifest>
